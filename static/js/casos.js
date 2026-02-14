@@ -67,7 +67,7 @@ let touchStartX = 0;
 let touchEndX = 0;
 
 function getCardsPerView() {
-    if (window.innerWidth >= 1024) return 3;
+    if (window.innerWidth >= 1280) return 3;
     if (window.innerWidth >= 768) return 2;
     return 1;
 }

@@ -388,16 +388,18 @@ h6 {
 
 .case-card {
     background-color: var(--bg-card);
+    border: 1px solid transparent;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 4px 12px var(--shadow);
     transition: transform 0.3s ease;
     flex: 0 0 calc(100% - 1.25rem);
     min-width: 0;
+    transition: all 0.3s ease-in-out;
 }
 
 .case-card:hover {
-    transform: translateY(-4px);
+    border-color: var(--main-color);
 }
 
 .carousel-btn {
@@ -479,10 +481,19 @@ h6 {
     padding: 1.5rem;
 }
 
+.case-info a {
+    color: var(--text-primary);
+    text-decoration: underline var(--text-primary);
+}
+
+.case-info a:hover {
+    color: var(--main-color);
+    text-decoration-color: var(--main-color);
+}
+
 .case-info h3 {
     font-size: 1rem;
     margin-bottom: 0.75rem;
-    color: var(--text-primary);
 }
 
 .case-info p {
@@ -735,10 +746,6 @@ h6 {
     .services-list li {
         font-size: 1.4rem;
     }
-
-    .case-card {
-        flex: 0 0 calc(33.333% - 1rem);
-    }
     
     .carousel-btn {
         width: 55px;
@@ -757,5 +764,11 @@ h6 {
 
     .about-text {
         font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .case-card {
+        flex: 0 0 calc(33.333% - 1rem);
     }
 }
