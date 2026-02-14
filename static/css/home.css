@@ -693,7 +693,7 @@ h6 {
     }
 
     .case-card {
-        flex: 0 0 calc(50% - 0.75rem);
+        flex: 0 0 calc(50% - 1.25rem);
     }
     
     .carousel-btn {
@@ -769,6 +769,6 @@ h6 {
 
 @media (min-width: 1280px) {
     .case-card {
-        flex: 0 0 calc(33.333% - 1rem);
+        flex: 0 0 calc(33.333% - 1.25rem);
     }
 }
