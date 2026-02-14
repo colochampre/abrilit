@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .favicon-text {
+        font-family: Montserrat, "Arial Black", sans-serif;
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.5px;
+        fill: #ffffff;
+        stroke: #034bdb;
+        stroke-width: 5;
+        stroke-linejoin: round;
+        stroke-linecap: round;
+        paint-order: stroke fill;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+  <text class="favicon-text" x="16" y="13">AB</text>
+  <text class="favicon-text" x="16" y="28">IT</text>
+</svg>

@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* ============================================
+   VARIABLES - TEMA OSCURO (DEFAULT)
+   ============================================ */
+:root,
+[data-theme="dark"] {
+    --main-color: #034bdb;
+    --degrade-color-1: #0b40cf;
+    --degrade-color-2: #023292;
+
+    --bg-primary: #010101;
+    --bg-secondary: #0a0a0a;
+    --bg-hero: #010101;
+    --bg-section: #034bdb;
+    --bg-card: #1a1a1a;
+
+    --text-primary: #f0f0f0;
+    --text-secondary: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --text-brand: #f0f0f0;
+
+    --border-color: #333333;
+    --shadow: rgba(0, 0, 0, 0.5);
+
+    --layer-color-1: #02060F;
+    --layer-color-2: #01091C;
+    --layer-color-3: #01102D;
+    --layer-color-4: #02143A;
+    --layer-color-5: #021A48;
+    --layer-color-6: #021F57;
+    --layer-color-7: #022366;
+    --layer-color-8: #022775;
+    --layer-color-9: #022B83;
+    --layer-color-10: #033191;
+    --layer-color-11: #02379F;
+    --layer-color-12: #033AAE;
+    --layer-color-13: #0442BD;
+    --layer-color-14: #0346CB;
+    --layer-color-15: #034ADA;
+}
+
+/* ============================================
+   VARIABLES - TEMA CLARO
+   ============================================ */
+[data-theme="light"] {
+
+    --bg-primary: #f0f0f0;
+    --bg-secondary: #f5f5f5;
+    --bg-hero: #010101;
+    --bg-section: #034bdb;
+    --bg-card: #ffffff;
+
+    --text-primary: #010101;
+    --text-secondary: #303030;
+    --text-muted: #666666;
+    --text-brand: #034bdb;
+
+    --border-color: #e0e0e0;
+    --shadow: rgba(0, 0, 0, 0.1);
+
+    --layer-color-1: #E8ECF2;
+    --layer-color-2: #DFE4EE;
+    --layer-color-3: #CED8ED;
+    --layer-color-4: #BDCDEC;
+    --layer-color-5: #ACC1EA;
+    --layer-color-6: #9BB5E8;
+    --layer-color-7: #8AA9E7;
+    --layer-color-8: #7A9EE6;
+    --layer-color-9: #6992E4;
+    --layer-color-10: #5886E2;
+    --layer-color-11: #477AE1;
+    --layer-color-12: #366EE0;
+    --layer-color-13: #2563DE;
+    --layer-color-14: #1457DC;
+    --layer-color-15: #034ADA;
+}
+
+/* ============================================
+   GENERAL STYLES
+   ============================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    overflow-x: hidden;
+    transition: background-color 0.2s ease;
+}
+
+html,
+body {
+    cursor: default;
+}
+
+h1,
+h2 {
+    font-weight: 700;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 600;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: var(--bg-primary);
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.2s ease;
+}
+
+.max-width-format {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+}
+
+.brand {
+    text-decoration: none;
+    color: var(--text-primary);
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-brand);
+}
+
+.navbar-icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-icon {
+    color: var(--text-primary) !important;
+    font-size: 1.5rem;
+    text-decoration: none !important;
+    transition: color 0.2s ease;
+    padding: 0.5rem;
+}
+
+.nav-icon:hover {
+    color: var(--main-color) !important;
+}
+
+.btn-link.nav-icon {
+    border: none;
+    background: none;
+}
+
+.dropdown-toggle::after {
+    display: none !important;
+}
+
+.dropdown-menu {
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 12px var(--shadow);
+    min-width: 200px;
+}
+
+.dropdown-item {
+    color: var(--text-primary);
+    padding: 0.75rem 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--main-color);
+    color: #ffffff;
+}
+
+.dropdown-header {
+    color: var(--text-muted);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.dropdown-divider {
+    border-color: var(--border-color);
+}
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    min-height: 75vh;
+    background-color: var(--bg-primary);
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    padding: 1rem;
+    transition: all 0.2s ease;
+    border-radius: 0 0 2rem 2rem;
+    z-index: 6;
+}
+
+.stack {
+    position: absolute;
+    width: 95%;
+    height: 100%;
+    left: 5%;
+}
+
+.layer {
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+
+    /* Total de capas */
+    --layers: 15;
+
+    /* tamaño base */
+    --base-w: 100%;
+    --base-h: 100%;
+
+    /* progresión */
+    --shrink-x: calc(var(--j)* 3.3%);
+    --shrink-y: calc(var(--i)* 3.2%);
+
+    width: calc(var(--base-w) - var(--shrink-x));
+    height: calc(var(--base-h) - var(--shrink-y));
+    left: calc(var(--i)* 2.8%);
+    /* transform: translateX(calc(var(--i)* 1.5%)); */
+
+    /* clip dinámico */
+    --cut: calc(var(--i)*(100% / var(--layers)));
+    
+    clip-path: polygon(var(--cut) -20%, 
+    250% 0%, 
+    250% 250%, 
+    0% 250%, 
+    0% 250%);
+}
+
+.layer:nth-child(1) {--i: 0; --j: 0; background-color: var(--layer-color-1); border-radius: 2rem;}
+.layer:nth-child(2) {--i: 1; --j: 1.5; background-color: var(--layer-color-2); border-radius: 1.75rem;}
+.layer:nth-child(3) {--i: 2; --j: 3; background-color: var(--layer-color-3); border-radius: 1.5rem;}
+.layer:nth-child(4) {--i: 3; --j: 4.5; background-color: var(--layer-color-4); border-radius: 1.25rem;}
+.layer:nth-child(5) {--i: 4; --j: 6; background-color: var(--layer-color-5); border-radius: 1rem;}
+.layer:nth-child(6) {--i: 5; --j: 7.5; background-color: var(--layer-color-6); border-radius: 0.75rem;}
+.layer:nth-child(7) {--i: 6; --j: 9; background-color: var(--layer-color-7); border-radius: rem;}
+.layer:nth-child(8) {--i: 7; --j: 10.5; background-color: var(--layer-color-8);}
+.layer:nth-child(9) {--i: 8; --j: 12; background-color: var(--layer-color-9);}
+.layer:nth-child(10) {--i: 9; --j: 13.5; background-color: var(--layer-color-10);}
+.layer:nth-child(11) {--i: 10; --j: 15; background-color: var(--layer-color-11);}
+.layer:nth-child(12) {--i: 11; --j: 16.5; background-color: var(--layer-color-12);}
+.layer:nth-child(13) {--i: 12; --j: 18; background-color: var(--layer-color-13);}
+.layer:nth-child(14) {--i: 13; --j: 19.5; background-color: var(--layer-color-14);}
+.layer:nth-child(15) {--i: 14; --j: 21; background-color: var(--layer-color-15);}
+
+.hero-content {
+    position: relative;
+    padding: 2rem;
+    width: 100%;
+    text-align: left;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.btn-custom {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+    background-color: #ffffff;
+    color: var(--main-color);
+}
+
+/* ============================================
+   SERVICIOS SECTION
+   ============================================ */
+.servicios {
+    background: linear-gradient(135deg, var(--degrade-color-1) 0%, var(--degrade-color-2) 100%);
+    color: #ffffff;
+    padding: 6rem 1.5rem 3rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-top: -2rem;
+}
+
+.section-title {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.services-list {
+    list-style: none;
+    padding: 0;
+}
+
+.services-list li {
+    font-size: 1rem;
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--bg-primary);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+.services-list li:hover {
+    background-color: var(--main-color);
+    border-radius: 0 0 0.5rem 0.5rem;
+    border-color: transparent;
+    transform: translateY(-3px);
+}
+
+.services-list li:last-child {
+    border-bottom: none;
+}
+
+.services-list li::before {
+    content: "> ";
+}
+
+/* ============================================
+   CASOS DE ÉXITO SECTION
+   ============================================ */
+.algunos-casos {
+    background-color: var(--bg-primary);
+    padding: 5rem 1.5rem 3rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    position: relative;
+}
+
+.algunos-casos .section-title {
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+.cases-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.case-card {
+    background-color: var(--bg-card);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.case-card:hover {
+    transform: translateY(-4px);
+}
+
+.case-image {
+    width: 100%;
+    height: 200px;
+    object-fit: fill;
+}
+
+.case-info {
+    padding: 1.5rem;
+}
+
+.case-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-primary);
+}
+
+.case-info p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    text-align: justify;
+}
+
+/* ============================================
+   QUIENES SOMOS SECTION
+   ============================================ */
+.quienes-somos {
+    background: linear-gradient(135deg, var(--degrade-color-1) 0%, var(--degrade-color-2) 100%);
+    color: #f0f0f0;
+    padding: 6rem 1.5rem 3rem;
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-top: -2rem;
+}
+
+.quienes-somos .section-title {
+    color: #f0f0f0;
+    margin-bottom: 1.5rem;
+}
+
+.about-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #ffffff;
+    text-align: justify;
+}
+
+.about-text strong {
+    font-weight: 700;
+}
+
+/* ============================================
+   CONTACTO SECTION
+   ============================================ */
+.contacto {
+    background: linear-gradient(180deg, var(--bg-primary) 0%, var(--degrade-color-1) 100%);
+    /*background-color: var(--bg-primary);*/
+    padding: 3rem 1.5rem;
+    z-index: 2;
+}
+
+.contacto .section-title {
+    color: var(--text-primary);
+    margin-bottom: 2rem;
+}
+
+#contact-title {
+    text-align: center;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 1.0rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background-color: var(--text-secondary);
+    color: var(--bg-primary);
+    font-family: "Montserrat", sans-serif;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--main-color);
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+    background-color: var(--bg-secondary);
+    padding: 2rem 1.5rem;
+    border-top: 1px solid var(--border-color);
+    z-index: 1;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.footer-content .brand-text {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.footer-icons {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.footer-icon {
+    color: var(--text-primary);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.footer-icon i {
+    font-size: 1.5rem;
+}
+
+.footer-icon:hover {
+    color: var(--main-color);
+}
+
+/* ============================================
+   MEDIA QUERIES - TABLET
+   ============================================ */
+@media (min-width: 768px) {
+    .navbar-custom {
+        padding: 1.5rem 3rem;
+    }
+
+    .hero-content {
+        padding: 3rem;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+    }
+
+    .servicios,
+    .algunos-casos,
+    .quienes-somos,
+    .contacto {
+        padding: 6rem 3rem 3rem;
+    }
+
+    .section-title {
+        font-size: 2.25rem;
+    }
+
+    .services-list li {
+        font-size: 1.2rem;
+    }
+
+    .algunos-casos {
+        background-color: var(--bg-primary);
+        border-radius: 0 0 2rem 2rem;
+    }
+
+    .quienes-somos {
+        margin-top: -2rem;
+    }
+
+    .cases-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: row;
+        gap: 6rem;
+    }
+
+    .footer-icons {
+        gap: 6rem;
+    }
+}
+
+/* ============================================
+   MEDIA QUERIES - DESKTOP
+   ============================================ */
+@media (min-width: 1024px) {
+    .navbar-custom {
+        padding: 1.5rem 5rem;
+    }
+
+    .brand-text {
+        font-size: 1.8rem;
+    }
+
+    .hero-content {
+        padding: 4rem 5rem;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .servicios,
+    .algunos-casos,
+    .quienes-somos,
+    .contacto {
+        padding: 7rem 5rem 5rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    .services-list li {
+        font-size: 1.4rem;
+    }
+
+    .cases-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+
+    .about-text {
+        font-size: 1.125rem;
+    }
+}

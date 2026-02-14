@@ -1,0 +1,5 @@
+*config*.php
+.env
+*.key
+*.pem
+smtp_config.php
