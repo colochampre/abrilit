@@ -2,13 +2,13 @@ const casos = [
     {
         nombre: {
             es: "Informes BTC - Busca tu coach",
-            en: "Informes BTC - Find your coach"
+            en: " BTC - Find your coach"
         },
         img: "static/img/caso-1.jpg",
         link: "https://buscatucoach.com/",
         descripcion: {
-            es: "Plataforma mediante la cual los coaches pueden gestionar tests online para el conocimiento de la personalidad de sus clientes.",
-            en: "Platform through which coaches can manage online tests for the knowledge of their clients' personality."
+            es: "Plataforma de gestión de tests online e informes mediante los cuales los coaches pueden conocer la personalidad de sus clientes, sus valores, intereses, inteligencias, creencias limitantes, etc. Un coach asigna tests a su cliente, este los completa, y la plataforma genera automáticamente los informes correspondientes, dejándolos a disposición del coach.",
+            en: "Platform for online tests and reports through which coaches can know the personality of their clients, their values, interests, intelligences, limiting beliefs, etc. A coach assigns tests to their client, this completes the tests, and the platform automatically generates the corresponding reports, leaving them at the coach's disposal."
         }
     },
     {
@@ -19,8 +19,20 @@ const casos = [
         img: "static/img/caso-2.jpg",
         link: "https://ladie-audiologia.com/",
         descripcion: {
-            es: "Gestión de productos, producción, trazabilidad, stocks, compras, ventas, clientes y proveedores.",
-            en: "Management of products, production, traceability, stocks, purchases, sales, customers and suppliers."
+            es: "Sistema de gestión integral diseñado específicamente para la empresa fabricante de equipos de audiometría. Incluye la administación de clientes, proveedores, productos, stocks, compras, ventas, producción y trazabilidad.",
+            en: "Management system designed specifically for the company manufacturer of audiometric equipment. Includes the administration of clients, suppliers, products, stocks, purchases, sales, production and traceability of the same."
+        }
+    },
+    {
+        nombre: {
+            es: "Peacock - Fábrica de Pinturas y Revestimientos",
+            en: "Peacock - Paint and Flooring Factory"
+        },
+        img: "static/img/caso-6.jpg",
+        link: "https://peacock.abrilit.ar/",
+        descripcion: {
+            es: "Sistema de gestión integral diseñado específicamente para fábricas de pinturas y revestimientos. El sistema permite la administración completa del ciclo de vida de pedidos, desde la creación hasta la finalización, garantizando la trazabilidad completa y el control de calidad en cada etapa del proceso.",
+            en: "Management system designed specifically for paint and flooring factories. The system allows the complete management of the life cycle of orders, from creation to completion, ensuring complete traceability and quality control at each stage of the process."
         }
     },
     {
@@ -55,8 +67,8 @@ const casos = [
         img: "static/img/caso-5.jpg",
         link: "https://www.econo.unlp.edu.ar/",
         descripcion: {
-            es: "Sistema de gestión de la investigación de la Secretaría de Investigación y Transferencia.",
-            en: "Investigation management system of the Research and Transfer Secretariat."
+            es: "Sistema de gestión de la investigación de la Secretaría de Investigación y Transferencia. Permite la administración de los investigadores de la Facultad, sus planes de trabajo, convocatorias a proyectos, subsidios y becas, y obtención de reportes.",
+            en: "Investigation management system of the Research and Transfer Secretariat. Allows the administration of the researchers of the Faculty, their work plans, calls for projects, subsidies and scholarships, and obtaining the necessary reports."
         }
     }
 ];
