@@ -2,7 +2,7 @@ const casos = [
     {
         nombre: {
             es: "Informes BTC - Busca tu coach",
-            en: " BTC - Find your coach"
+            en: "BTC Reports - Find your coach"
         },
         img: "static/img/caso-1.jpg",
         link: "https://buscatucoach.com/",

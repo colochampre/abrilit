@@ -26,7 +26,10 @@ const translations = {
         'name': 'Nombre',
         'email': 'Email',
         'message': 'Mensaje',
-        'send-message': 'Enviar mensaje'
+        'send-message': 'Enviar mensaje',
+        'sending': 'Enviando...',
+        'success-message': '¡Mensaje enviado correctamente! Te contactaremos pronto.',
+        'error-message': 'Error al enviar el mensaje. Por favor, intenta nuevamente.'
     },
     en: {
         'theme': 'Theme',
@@ -52,7 +55,10 @@ const translations = {
         'name': 'Name',
         'email': 'Email',
         'message': 'Message',
-        'send-message': 'Send message'
+        'send-message': 'Send message',
+        'sending': 'Sending...',
+        'success-message': 'Message sent successfully! We will contact you soon.',
+        'error-message': 'Error sending message. Please try again.'
     }
 };
 
@@ -153,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const submitBtn = contactForm.querySelector('.btn-submit');
             const originalText = submitBtn.textContent;
             submitBtn.disabled = true;
-            submitBtn.textContent = currentLang === 'es' ? 'Enviando...' : 'Sending...';
+            submitBtn.textContent = translations[currentLang]['sending'] || 'Enviando...';
             
             const formData = {
                 nombre: document.getElementById('nombre').value,
@@ -176,14 +182,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 const result = await response.json();
 
                 if (result.success) {
-                    alert(currentLang === 'es' ? '¡Mensaje enviado correctamente! Te contactaremos pronto.' : 'Message sent successfully! We will contact you soon.');
+                    alert(translations[currentLang]['success-message'] || '¡Mensaje enviado correctamente! Te contactaremos pronto.');
                     contactForm.reset();
                 } else {
-                    alert(currentLang === 'es' ? 'Error al enviar el mensaje. Por favor, intenta nuevamente.' : 'Error sending message. Please try again.');
+                    alert(translations[currentLang]['error-message'] || 'Error al enviar el mensaje. Por favor, intenta nuevamente.');
                 }
             } catch (error) {
                 console.error('Error:', error);
-                alert(currentLang === 'es' ? 'Error al enviar el mensaje. Por favor, intenta nuevamente.' : 'Error sending message. Please try again.');
+                alert(translations[currentLang]['error-message'] || 'Error al enviar el mensaje. Por favor, intenta nuevamente.');
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalText;
